@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -107,13 +109,47 @@
     <routinesParameter id="__kdk0Ha1EeiP9MnDDqvWBg" name="DQTechnical"/>
     <routinesParameter id="__l-AsHa1EeiP9MnDDqvWBg" name="SQLike"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2459dbf1-3705-49ce-9c0d-bb366be336d1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZZ/GOOej0Qd4MZuKrZBbnQIL0E2dvx2uJv1JrNIz2LnCp19BaaeYD9P8wLomp0oUe3kQ419HQMSs
-PaAYjoeJbg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_15474711-7588-4996-976d-6a5e818a5406"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>M3V0pBoY07jZ2EYhiAi2Rt1TQ+rnV47t9OjRJiyMrbWBXVCG4ViKlE8oPZFzpQ4gQqmwSEHRf/KS
-zvrKrlxaqQ==</DigestValue></Reference></SignedInfo><SignatureValue>mzKhnCccvcsJ7TmDYCe5fL9AshLB/ycYVIzv710sxfYuUGaVhw0cyDD+xce5EslhUs3z4Z5/XYMP
-akrGrC0Khwr5HMsKuEnbNsTa6659xPv5PZ+o794lASU1uP3/YWzlC+J1hxnZkSTV8gAhyshNcRhG
-ZDn7XXkXKkaDr+e8cXeUwaCa9gsVX4MhxRy5DwnpyIXSrriSr3ZpkDo3+wWhlAO3I7RoV1hOQaBR
-kspfPXnI4g6i43o7ETp2JNQC0SIanTIvOFLQ2NLqIGzywNIsPvIfIY9w50x1ayKRoeAhjbM+pfjN
-vwY9NapHA5TaQcYe5mv4Y4QLw1fa4euwQViwGA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <node componentName="tMapRDBConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMapRDBConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="HBASE_VERSION" value="MAPR510"/>
+    <elementParameter field="HADOOP_DISTRIBUTION" name="MAPRDB" value=""/>
+    <elementParameter field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="HADOOP_CUSTOM_VERSION" show="false" value="HADOOP_1"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_QUORUM" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_CLIENT_PORT" value="&quot;5181&quot;"/>
+    <elementParameter field="CHECK" name="SET_ZNODE_PARENT" value="false"/>
+    <elementParameter field="TEXT" name="ZNODE_PARENT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CONFIGURATIONS_FROM_CLASSPATH" value="false"/>
+    <elementParameter field="CHECK" name="USE_KRB" value="false"/>
+    <elementParameter field="TEXT" name="HBASE_MASTER_PRINCIPAL" show="false" value="&quot;mapr/_HOST@EXAMPLE.COM&quot;"/>
+    <elementParameter field="TEXT" name="HBASE_REGIONSERVER_PRINCIPAL" show="false" value="&quot;mapr/_HOST@EXAMPLE.COM&quot;"/>
+    <elementParameter field="CHECK" name="USE_KEYTAB" show="false" value="false"/>
+    <elementParameter field="TEXT" name="PRINCIPAL" show="false" value="&quot;hdfs&quot;"/>
+    <elementParameter field="FILE" name="KEYTAB_PATH" show="false" value="&quot;/tmp/hdfs.headless.keytab&quot;"/>
+    <elementParameter field="CHECK" name="USE_MAPRTICKET" value="false"/>
+    <elementParameter field="TEXT" name="USERNAME" show="false" value="&quot;anonymous&quot;"/>
+    <elementParameter field="PASSWORD" name="MAPRTICKET_PASSWORD" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="TEXT" name="MAPRTICKET_CLUSTER" show="false" value="&quot;demo.mapr.com&quot;"/>
+    <elementParameter field="TEXT" name="MAPRTICKET_DURATION" show="false" value="86400L"/>
+    <elementParameter field="TABLE" name="HBASE_PARAMETERS"/>
+    <elementParameter field="CHECK" name="SET_MAPR_HOME_DIR" show="false" value="false"/>
+    <elementParameter field="TEXT" name="MAPR_HOME_DIR" show="false" value="&quot;/opt/mapr&quot;"/>
+    <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HADOOP_LOGIN" show="false" value="&quot;kerberos&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMapRDBConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_eda2dda5-f16d-4ed7-9efc-d5e56e000cbc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>k0jI2QLS6vZugLs0jR5DoHH1WhoOmMbRBsn6u3hzTn7cM1tWrjKVys2Ef1XCOS4Mfq8N2a2lIcyA
+A9jKGSrDkQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c1f666f2-e664-4ca1-b3d9-2d4a8f258ff5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TLCktxytSfWkaGFQ5UdWZ0N6O0SBnTWUHYz0IISBEcK82n0CiyRlMjm0IPMoST2EYcZCwEVszDqK
+tovVNvc56A==</DigestValue></Reference></SignedInfo><SignatureValue>L75ap22Q7HwPJ0pJkzbA8sEwnNbjjs1soZ0X5vW/Y8Jgqxye8AxGaYS03m28pgC3WzTB5/E/F5kT
+5vVXToLIfgXNFJLoJueqpwxqEvzcwXflZPZ7E4uEu5CXwJYJSOk011xPbr3YHGjGoZA57UgMxQWx
+xLuh8E5wVPG6rPYauircXrwevsbMcHMsDp1kPyx0GX4zKTXUPy6uzoE3qzg1pVc5uQS75TzCu7yV
+oABB+pXES+puH6pBvzWRnR1fnKD6moCf/e5dGr2JO/KjvBLdz5dekAcbzJ4fNeZ1Ab9USlwaHAd7
+KNJ6ebE7Qm/dbkjzMbgIzbXZwggkR2edoclGgg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -137,4 +173,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_15474711-7588-4996-976d-6a5e818a5406" Target="#_2459dbf1-3705-49ce-9c0d-bb366be336d1"><Timestamp>2018-06-23 07:23:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c1f666f2-e664-4ca1-b3d9-2d4a8f258ff5" Target="#_eda2dda5-f16d-4ed7-9efc-d5e56e000cbc"><Timestamp>2018-06-23 07:25:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
