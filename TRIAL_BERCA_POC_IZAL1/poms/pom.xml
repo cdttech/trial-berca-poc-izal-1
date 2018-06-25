@@ -12,6 +12,7 @@
     <module>code/routines</module>
     <module>jobs/process/testmaprconn_0.1</module>
     <module>jobs/process/testmysqlconn_0.1</module>
+    <module>jobs/process/createamcscheme_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TRIAL_BERCA_POC_IZAL1</talend.project.name>
