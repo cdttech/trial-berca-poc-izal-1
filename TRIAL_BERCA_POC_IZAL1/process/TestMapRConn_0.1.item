@@ -109,7 +109,7 @@
     <routinesParameter id="__kdk0Ha1EeiP9MnDDqvWBg" name="DQTechnical"/>
     <routinesParameter id="__l-AsHa1EeiP9MnDDqvWBg" name="SQLike"/>
   </parameters>
-  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="96">
+  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
     <elementParameter field="TEXT" name="NB_ROWS" show="false" value="100"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
@@ -129,7 +129,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tMapROjaiOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="96">
+  <node componentName="tMapROjaiOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMapROjaiOutput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" show="false" value="false"/>
     <elementParameter field="TEXT" name="TABLE" value="&quot;/user/mapr/trializal&quot;"/>
@@ -171,6 +171,37 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tMapRDBConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMapRDBConnection_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_-AbcwHhWEeiufqKe5Mn6UA"/>
+    <elementParameter field="CLOSED_LIST" name="HBASE_VERSION" value="MAPR600"/>
+    <elementParameter field="HADOOP_DISTRIBUTION" name="MAPRDB" value=""/>
+    <elementParameter field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="HADOOP_CUSTOM_VERSION" show="false" value="HADOOP_1"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_QUORUM" value="&quot;POC-CIMB-002&quot;"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_CLIENT_PORT" value="&quot;5181&quot;"/>
+    <elementParameter field="CHECK" name="SET_ZNODE_PARENT" value="false"/>
+    <elementParameter field="TEXT" name="ZNODE_PARENT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CONFIGURATIONS_FROM_CLASSPATH" value="false"/>
+    <elementParameter field="CHECK" name="USE_KRB" value="false"/>
+    <elementParameter field="TEXT" name="HBASE_MASTER_PRINCIPAL" show="false" value="&quot;hbase/_HOST@EXAMPLE.COM&quot;"/>
+    <elementParameter field="TEXT" name="HBASE_REGIONSERVER_PRINCIPAL" show="false" value="&quot;hbase/_HOST@EXAMPLE.COM&quot;"/>
+    <elementParameter field="CHECK" name="USE_KEYTAB" show="false" value="false"/>
+    <elementParameter field="TEXT" name="PRINCIPAL" show="false" value="&quot;hdfs&quot;"/>
+    <elementParameter field="FILE" name="KEYTAB_PATH" show="false" value="&quot;/tmp/hdfs.headless.keytab&quot;"/>
+    <elementParameter field="CHECK" name="USE_MAPRTICKET" value="false"/>
+    <elementParameter field="TEXT" name="USERNAME" show="false" value="&quot;anonymous&quot;"/>
+    <elementParameter field="PASSWORD" name="MAPRTICKET_PASSWORD" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="TEXT" name="MAPRTICKET_CLUSTER" show="false" value="&quot;demo.mapr.com&quot;"/>
+    <elementParameter field="TEXT" name="MAPRTICKET_DURATION" show="false" value="86400L"/>
+    <elementParameter field="TABLE" name="HBASE_PARAMETERS"/>
+    <elementParameter field="CHECK" name="SET_MAPR_HOME_DIR" show="false" value="false"/>
+    <elementParameter field="TEXT" name="MAPR_HOME_DIR" show="false" value="&quot;/opt/mapr&quot;"/>
+    <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HADOOP_LOGIN" show="false" value="&quot;kerberos&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tRowGenerator_1" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_1" target="tMapROjaiOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -180,13 +211,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a01fe320-a0a8-4a48-8844-3778945b7eb3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BLnsCCIjo0GlzL5x2+rrH1+zc4oe2f2lAKVqsqFy0EWL+XBvYSWj1S5ceUpqYq6xwDqk6yMPdwoz
-duWMYwv8XA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fe694468-3891-478a-a10d-edb9e248a1de"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9YzZMUAmtkNI0iyjPOulx9DR6sIrdm5PGCty2aEicRbWjkzy4CGXOHFYjBbSnZ3ow0iJMADIQ7aF
-ALbR+45qcg==</DigestValue></Reference></SignedInfo><SignatureValue>BnOXgYpbqa71DIcmYvDIhwLMawQi1Oo8m9RzRsgfzj+cXw8pVoAl3XxWgMNYMVpBDQa9BubHsb7E
-H5eqj/9B2kzE0zRZzR8b1ZeQBIWlxL1s2gUvGxeZ4kadzZydb7Rd9B2orsle8DuNk5631y8hPqlm
-nXAKA2o/tyKLnvRCQoDfaTPSTKG4+SVl4GJzDQxiCkb6BFLHmaDr8zrR0B7Kdysa3I43Tr/83Nh/
-54X668UfMKkhPmXmPxGHDIx7U/StHCBviI+T9nL+Eug2Oq6hLKxjrdfWiJ6TPzPjllD20uJnma/3
-rN6i9EzMc1ch6mYgWls6VU001h20nkTuWarzhg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMapRDBConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f3e30730-10ef-411d-a158-c04ea57af752"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+kdNvpCcUe24NsKaVUxnSEpQdFWKiWkFBzpTPZJupqKqFVKvos4UHP1RqXrDVTR83rkmgqf9cVa5
+oFv1LFcDrg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3896895c-38b0-45da-8bbf-a3af3cb98df1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ih5iopGuXitRSgLa3hsWbsGi6lMcZkToIhJ8fFehptuy95oKCggTTAVsuGl27TYYkKx7poNHjVxB
+Jb5YZdrJFw==</DigestValue></Reference></SignedInfo><SignatureValue>gzNH+K6DR6U49VgFNasZsu9DaZKrpmV5kZhiYQZC449uNeYhw76EPckGTfEGaCK4MNCSBYSWUh1t
+diASLkJeTZ5iIHVDKCXH/IlSGBzyLBR9aOuExAP0SwsxDesJtfzPg8hDG2//I70bwzZGN+CuNaOy
+nxD6CKUQBFKy6/6TQZonyd4x0x2S9atPT1Ts1dYyJZE6tkNX+fLSSxAiTKouHY3M1TujC2WCq7EC
+X1M09bqOlFTAVKW6OhBPy1EascC90s8vDa37wmElOSGoInEH1Ke8earFYR68l6/M5cdrg9PWD/Nf
+usLfM+islRHoI1M0q7pteJSbroXB8l9Y3foa1Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -210,4 +246,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fe694468-3891-478a-a10d-edb9e248a1de" Target="#_a01fe320-a0a8-4a48-8844-3778945b7eb3"><Timestamp>2018-06-25 09:57:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3896895c-38b0-45da-8bbf-a3af3cb98df1" Target="#_f3e30730-10ef-411d-a158-c04ea57af752"><Timestamp>2018-06-25 09:59:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

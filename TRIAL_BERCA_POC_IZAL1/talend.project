@@ -102,6 +102,7 @@
       <relatedItems xmi:id="_jfBHrna2EeiP9MnDDqvWBg" id="DQTechnical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_jfBHr3a2EeiP9MnDDqvWBg" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="_jfBHsHa2EeiP9MnDDqvWBg" id="DataQualityDependencies" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_YiBA4HheEeiufqKe5Mn6UA" id="_-AbcwHhWEeiufqKe5Mn6UA" version="Latest" type="property"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_FBzjAHbREeiwD-Fsyn39NQ">
       <baseItem xmi:id="_FBzjAXbREeiwD-Fsyn39NQ" id="_ZHLLQHbQEeiwD-Fsyn39NQ" version="0.1" type="job"/>
