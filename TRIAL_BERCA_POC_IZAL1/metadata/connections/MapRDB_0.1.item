@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmi:version="2.0">
-  <TalendMetadata:DatabaseConnection AdditionalParams="" DatabaseType="MapRDB" DatasourceName="" DbmsId="mysql_id" FileFieldName="" NullChar="" Password="" Port="5181" ProductId="MAPRDB" SID="MapRDB" SQLMode="false" ServerName="POC-CIMB-002" SqlSynthax="" StandardSQL="true" StringQuote="" URL="127.0.0.1" UiSchema="family" Username="" dataPackage="_6b9bAHhXEeiufqKe5Mn6UA" id="_-AbcwHhWEeiufqKe5Mn6UA" label="MapRDB" name="MapRDB" xmi:id="_6a3O0HhXEeiufqKe5Mn6UA">
+  <TalendMetadata:DatabaseConnection AdditionalParams="" DatabaseType="MapRDB" DatasourceName="" DbmsId="mysql_id" FileFieldName="" NullChar="" Password="" Port="5181" ProductId="MAPRDB" SID="MapRDB" SQLMode="false" ServerName="POC-CIMB-002" SqlSynthax="" StandardSQL="true" StringQuote="" URL="127.0.0.1" UiSchema="" Username="" dataPackage="_6b9bAHhXEeiufqKe5Mn6UA" id="_-AbcwHhWEeiufqKe5Mn6UA" label="MapRDB" name="MapRDB" xmi:id="_6a3O0HhXEeiufqKe5Mn6UA">
     <taggedValue tag="Is Conn Need Reload" value="true" xmi:id="_6a3O0XhXEeiufqKe5Mn6UA"/>
     <taggedValue tag="package filter" value="" xmi:id="_6b8z8HhXEeiufqKe5Mn6UA"/>
     <taggedValue tag="Status" value="" xmi:id="_CukxcHhYEeiufqKe5Mn6UA"/>
@@ -18,13 +18,13 @@
     <parameters key="CONN_PARA_KEY_HADOOP_CLUSTER_ID" xmi:id="_6a3O2XhXEeiufqKe5Mn6UA"/>
   </TalendMetadata:DatabaseConnection>
   <orgomg.cwm.resource.relational:Catalog dataManager="_6a3O0HhXEeiufqKe5Mn6UA" name="MapRDB" xmi:id="_6b9bAHhXEeiufqKe5Mn6UA"/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5c7937ea-e7da-49c7-a474-553a0380d751"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BFa/qFkcvC7rvRMiHI04ir+seSxRq2vvZ5iE4kiUmBCmCiqeUynbu+C4SYlZ7K8Mcup3CB98gCxt
-4YrKHAZmxw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_27c2e5e6-65a7-4835-bce1-a7a6806288b8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cTTTbaUFNOW4MLLIIabriw+NqQLkV5jFTyrVLA1S7DpDyj+ZgxXEWpx+1EpnxdxZDArAtyhfvFF6
-9HOJwbkFpQ==</DigestValue></Reference></SignedInfo><SignatureValue>1LuxfYQRHU3M3rsOYjtJn4XqmeqFvJswWFTpc2aFHYDvHY8wEY9rb+/+BAuicnjNI8mRUONPHBqN
-kaRD+xNZtpr9zaffaA1iO/eKTBnhHCLT8ElA8aoX93JkUylngzl7JKde8ZpHMWboWPdbDqlcZBo7
-TAekglwbxbRqRY8oWRgTqwATE4/taoZKpSqHIldQYmsX2zS9rxyw1GQ2iVMclvAC121DPG9TsxJy
-+66JO+AUt0KWljieePiUa488Z9yNHJzq6N6mO2ufu7EuO1sjfEpqwsxrmkQ/xf+Q/lE6jaEG/bLg
-bvixfdpsrJR70xJi60xd9oQSra6YBPekoBMs8Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_059f9e5d-031c-4ae2-9c6c-97fb9d738e9b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>69OWYrLQ26sH1sXNkRK+YlVbyhMor3Rle2btPFRQl3WrOWv+N1T5W6wHytw+nqfSQ29BsSmDGEE+
+SphJD4SwTQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9c01d708-55a7-4e82-ac1d-5cbe4385c7a4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+2Sqc8b4Nwgk2ydIsB71Wwap9cbgc/41rkUBZUEIinFYqZKwfUHj2doBXqIq+am6g8MES8HosT9A
+fVReZu0b4Q==</DigestValue></Reference></SignedInfo><SignatureValue>Ul2SxVIM4R2dw86rCHDz+3JdV++x0tXoE4bW1QbyvmnuyTZqbDUtUwH4Tv9VX+nfNsz3UyqFUChr
+Crsrsj6dGTWowQeQ/t06scaqB5qiW4gJAXPHQB1RC3LmyauYcbWb0+1qajC7B04+2wTdyNYV67i+
+1XbsQt5vY7ohGQt6R9J/euIOine3afYtJNuqlYGOsh6w5YkfrE+9LHFT10g0jcn5ObFueT6foy4H
+SeVq1XM3ksFWPpl33bF4vPNUiuYpBEBEmxSgbovSNh6qBEhhWShirhehw+jsnP6ZcI7biDmtXbUw
+vAmPuMTfiHGpxWSZ2T5EcvQjp2t4eAWUDz9xjQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -48,4 +48,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_27c2e5e6-65a7-4835-bce1-a7a6806288b8" Target="#_5c7937ea-e7da-49c7-a474-553a0380d751"><Timestamp>2018-06-25 09:36:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9c01d708-55a7-4e82-ac1d-5cbe4385c7a4" Target="#_059f9e5d-031c-4ae2-9c6c-97fb9d738e9b"><Timestamp>2018-06-25 09:37:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
