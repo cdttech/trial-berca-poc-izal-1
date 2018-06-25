@@ -121,10 +121,10 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRowGenerator_1">
-      <column comment="" defaultValue="" key="false" length="-1" name="first_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="first_name" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="last_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="last_name" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
       </column>
     </metadata>
@@ -154,17 +154,17 @@
     <elementParameter field="PASSWORD" name="MAPRTICKET_PASSWORD" show="false" value="0RMsyjmybrE="/>
     <elementParameter field="TEXT" name="MAPRTICKET_CLUSTER" show="false" value="&quot;demo.mapr.com&quot;"/>
     <elementParameter field="TEXT" name="MAPRTICKET_DURATION" show="false" value="86400L"/>
-    <elementParameter field="TEXT" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TABLE" value="&quot;/user/mapr/trial_poc_izal&quot;"/>
     <elementParameter field="CHECK" name="SET_TABLE_NS_MAPPING" show="false" value="true"/>
     <elementParameter field="TEXT" name="TABLE_NS_MAPPING" value="&quot;*:/tables&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CHECK" name="CUSTOM_ROW_KEY" value="false"/>
     <elementParameter field="TEXT" name="ROW_KEY" show="false" value=""/>
     <elementParameter field="TABLE" name="FAMILIES">
       <elementValue elementRef="SCHEMA_COLUMN" value="first_name"/>
-      <elementValue elementRef="FAMILY_COLUMN" value=""/>
+      <elementValue elementRef="FAMILY_COLUMN" value="&quot;&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="last_name"/>
-      <elementValue elementRef="FAMILY_COLUMN" value=""/>
+      <elementValue elementRef="FAMILY_COLUMN" value="&quot;&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="CUSTOM_TIMESTAMP_COLUMN" value="false"/>
     <elementParameter field="PREV_COLUMN_LIST" name="TIMESTAMP_COLUMN" show="false" value="first_name"/>
@@ -172,17 +172,17 @@
     <elementParameter field="CHECK" name="USE_BATCH_MODE" value="false"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" show="false" value="500000"/>
     <elementParameter field="TABLE" name="HBASE_PARAMETERS"/>
-    <elementParameter field="TABLE" name="FAMILY_PARAMETERS" show="false"/>
+    <elementParameter field="TABLE" name="FAMILY_PARAMETERS"/>
     <elementParameter field="CHECK" name="SET_MAPR_HOME_DIR" show="false" value="false"/>
     <elementParameter field="TEXT" name="MAPR_HOME_DIR" show="false" value="&quot;/opt/mapr&quot;"/>
     <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" show="false" value="false"/>
     <elementParameter field="TEXT" name="HADOOP_LOGIN" show="false" value="&quot;kerberos&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMapRDBOutput_1">
-      <column comment="" defaultValue="" key="false" length="-1" name="first_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="first_name" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="last_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="255" name="last_name" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
       </column>
     </metadata>
@@ -196,13 +196,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6c123e32-5993-4182-bea9-38257e05e785"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bJer9m6eFwBgPXbryqzZTxW2a0iCrmR8Aq9WquEGzmH+yB27oSMUvjvQWyvOV1HAXECTpc98hrAD
-SfL0UeXEzw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b48c55b5-7abe-4184-ade2-76cdc65d87ed"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xw8oeMEeDKLCXon0GSxEUiJw2HZwktIKlTJ183gIB6VVGBodjFcJjKlHA1rLjL3ILFIWTpBlzfBt
-e7o6XXeVtg==</DigestValue></Reference></SignedInfo><SignatureValue>mfO5BmYrMk7qSINwNLe20bGUeuLimVPXeWsByHzmQSuJHbMQBOeQYS29q7h0mcdelSDDIMwqmm/o
-qLfeswjvbOs9INffkN5wHX39ydrkUAMXCOBQ7jWKXHC83mExvASmltjAgUouxv9/HjKGDau0KVft
-n3Hf0omwSwkyjU0kInYMiUAlRZgm85UGwM1U3/J9FNlOJcvp6AClcwYvQ5DK9NzMlD6SRliIshw7
-9xUQkgnHTe454Pbvab0smXVKg9ZYUb6bwKh0obofsmc59pg1i8vAYzrC6dunrWz46yDQv9hIicfw
-No9S1rNCgr3Q3bKq7fqwFjLda1JXIyj3SQEykg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1d280fdf-06cf-43d9-a11f-a8aaa938a9aa"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6trUOHcig/EcaseOEPxjPCUEzloozukIgViAhkFpxGlrXdc0QeMG7SwtcSRPz20dUTxfKytGafxP
+luE6wgFHeQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cc81aeeb-faa3-4509-b108-a0e2fc1c0aa4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Mva5H6K3z0g/4+Mr1lmf5+TgLe+O+HnB75Odi612xIbIlhDKsOu1cnJuzpvGSFN6qH9cmh3J4lyA
+yyV6JkfG4g==</DigestValue></Reference></SignedInfo><SignatureValue>DTZKkD0xKJAzrgEbcDTfQKWBso9GYspqdTCcSL7zbDsl5pOZd3T6mO1RReI/Sq86n/gAYtT4cmBm
+nA4n5SczYsPfOW8KIhB2YxmycNLNqH5wI5JDw8upzhvJ+queDNRf005PCby6cGtFUYU2XJn2lYQr
+daZzmcYErM33IChZ9oHqsmCkmfrZrk9puoMvm3wLklB39MTJaU95/stk3Y5EDx0b96E70nzFYS9/
+jV7XMmAKzlxtAt7B/DINUAb1HNYW5Kgl450NIlT1KYOSFj9/KMGsIV0Cspbipbmj/SMt1JPNVQ/U
+FFWs66jW2ceT3P8170lVvoZ00dmOFtJnbTsRDQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -226,4 +226,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b48c55b5-7abe-4184-ade2-76cdc65d87ed" Target="#_6c123e32-5993-4182-bea9-38257e05e785"><Timestamp>2018-06-25 09:32:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cc81aeeb-faa3-4509-b108-a0e2fc1c0aa4" Target="#_1d280fdf-06cf-43d9-a11f-a8aaa938a9aa"><Timestamp>2018-06-25 09:35:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
