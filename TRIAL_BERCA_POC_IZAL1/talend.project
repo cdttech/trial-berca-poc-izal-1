@@ -139,6 +139,7 @@
       <relatedItems xmi:id="_megYfngzEeiufqKe5Mn6UA" id="DQTechnical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_megYf3gzEeiufqKe5Mn6UA" id="DataQualityDependencies" version="Latest" type="routine"/>
       <relatedItems xmi:id="_megYgHgzEeiufqKe5Mn6UA" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_XSN_AHg0EeiufqKe5Mn6UA" id="_H0V1AHfiEeiJF_EzhnsuUg" version="Latest" type="context"/>
     </ItemsRelations>
     <migrationTask xmi:id="_-2rRwHa1EeiP9MnDDqvWBg" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_-2r40Ha1EeiP9MnDDqvWBg" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
