@@ -109,21 +109,43 @@
     <routinesParameter id="__kdk0Ha1EeiP9MnDDqvWBg" name="DQTechnical"/>
     <routinesParameter id="__l-AsHa1EeiP9MnDDqvWBg" name="SQLike"/>
   </parameters>
-  <node componentName="tMapRDBInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMapRDBInput_1"/>
+  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" show="false" value="100"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="first_name"/>
+      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getFirstName()"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="last_name"/>
+      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getLastName()"/>
+    </elementParameter>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRowGenerator_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="first_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="last_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tMapRDBOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMapRDBOutput_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_-AbcwHhWEeiufqKe5Mn6UA"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="HBASE_VERSION" value="MAPR600"/>
     <elementParameter field="HADOOP_DISTRIBUTION" name="MAPRDB" value=""/>
     <elementParameter field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_CUSTOM_VERSION" show="false" value="HADOOP_1"/>
-    <elementParameter field="TEXT" name="ZOOKEEPER_QUORUM" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_QUORUM" value="&quot;POC-CIMB-002&quot;"/>
     <elementParameter field="TEXT" name="ZOOKEEPER_CLIENT_PORT" value="&quot;5181&quot;"/>
     <elementParameter field="CHECK" name="SET_ZNODE_PARENT" value="false"/>
     <elementParameter field="TEXT" name="ZNODE_PARENT" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false"/>
-    <elementParameter field="TEXT" name="HBASE_MASTER_PRINCIPAL" show="false" value="&quot;mapr/_HOST@EXAMPLE.COM&quot;"/>
-    <elementParameter field="TEXT" name="HBASE_REGIONSERVER_PRINCIPAL" show="false" value="&quot;mapr/_HOST@EXAMPLE.COM&quot;"/>
+    <elementParameter field="TEXT" name="HBASE_MASTER_PRINCIPAL" show="false" value="&quot;hbase/_HOST@EXAMPLE.COM&quot;"/>
+    <elementParameter field="TEXT" name="HBASE_REGIONSERVER_PRINCIPAL" show="false" value="&quot;hbase/_HOST@EXAMPLE.COM&quot;"/>
     <elementParameter field="CHECK" name="USE_KEYTAB" show="false" value="false"/>
     <elementParameter field="TEXT" name="PRINCIPAL" show="false" value="&quot;hdfs&quot;"/>
     <elementParameter field="FILE" name="KEYTAB_PATH" show="false" value="&quot;/tmp/hdfs.headless.keytab&quot;"/>
@@ -135,36 +157,52 @@
     <elementParameter field="TEXT" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="SET_TABLE_NS_MAPPING" show="false" value="true"/>
     <elementParameter field="TEXT" name="TABLE_NS_MAPPING" value="&quot;*:/tables&quot;"/>
-    <elementParameter field="CHECK" name="DEFINE_ROW_SELECTION" value="false"/>
-    <elementParameter field="TEXT" name="START_ROW" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="END_ROW" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TABLE" name="MAPPING"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CHECK" name="CUSTOM_ROW_KEY" value="false"/>
+    <elementParameter field="TEXT" name="ROW_KEY" show="false" value=""/>
+    <elementParameter field="TABLE" name="FAMILIES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="first_name"/>
+      <elementValue elementRef="FAMILY_COLUMN" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="last_name"/>
+      <elementValue elementRef="FAMILY_COLUMN" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CUSTOM_TIMESTAMP_COLUMN" value="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="TIMESTAMP_COLUMN" show="false" value="first_name"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_MODE" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" show="false" value="500000"/>
     <elementParameter field="TABLE" name="HBASE_PARAMETERS"/>
-    <elementParameter field="CHECK" name="IS_BY_FILTER" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" show="false" value="MUST_PASS_ONE"/>
-    <elementParameter field="TABLE" name="FILTER" show="false"/>
+    <elementParameter field="TABLE" name="FAMILY_PARAMETERS" show="false"/>
     <elementParameter field="CHECK" name="SET_MAPR_HOME_DIR" show="false" value="false"/>
     <elementParameter field="TEXT" name="MAPR_HOME_DIR" show="false" value="&quot;/opt/mapr&quot;"/>
     <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" show="false" value="false"/>
     <elementParameter field="TEXT" name="HADOOP_LOGIN" show="false" value="&quot;kerberos&quot;"/>
-    <elementParameter field="CHECK" name="RETRIEVE_TIMESTAMP" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="TIMESTAMP_SOURCE_COLUMN" show="false" value=""/>
-    <elementParameter field="COLUMN_LIST" name="TIMESTAMP_COLUMN" show="false" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMapRDBInput_1"/>
+    <metadata connector="FLOW" name="tMapRDBOutput_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="first_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="last_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+    </metadata>
   </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tRowGenerator_1" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_1" target="tMapRDBOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMapRDBInput_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_03603773-5709-4686-aaa1-66caee8593b8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/lLaWnCbrMMupNXx86Q4ylYgvcL6y4dFOgq79IaXPSN9Y94z9RM5rnK3FlYkZx8VEIlYczh9fwk3
-Q/LINeyrxQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_130b1add-5bf9-4089-9bc0-b8bf6ecfed2a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zsD3dgfpCa99A1FxKTp0yedq/Ue4VdR990D1SL6XkkdO3JWoig5MhwsrPiXqVmyM79jeSIX2guBf
-0XdFZPYTMQ==</DigestValue></Reference></SignedInfo><SignatureValue>NZVqNqbp4eDbxNqiyITKOyKRBiBo1bhMK132GVh7PYk5NJmuprJaYIwo6HWpSwX4vMM2fffcSD1T
-SNXN+x0Eujg/70/TJ0B1H4GUeByOkWPMbrA5BwRjCsLf4uf6GVeQ1bZ9ABEc0Ws7pUNPgEoQN/si
-BppIkd4nps6+ZTWIOSoxOFwzV6/B8oPDh137t4A6V4AT1R+07VWIrj4rUO0OIsjpzAj0tzqoj3cm
-z2VcHcqfIq+KSsqiT/iag6HWTHy2MCe8JZBbdFmiQyTFSWxh1RT7oT7x7iYopriiErsMDrG08VFv
-WhNQCHAjxdFRPvrQXml5j+v0RgLxpjEk0jO0aw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6c123e32-5993-4182-bea9-38257e05e785"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bJer9m6eFwBgPXbryqzZTxW2a0iCrmR8Aq9WquEGzmH+yB27oSMUvjvQWyvOV1HAXECTpc98hrAD
+SfL0UeXEzw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b48c55b5-7abe-4184-ade2-76cdc65d87ed"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xw8oeMEeDKLCXon0GSxEUiJw2HZwktIKlTJ183gIB6VVGBodjFcJjKlHA1rLjL3ILFIWTpBlzfBt
+e7o6XXeVtg==</DigestValue></Reference></SignedInfo><SignatureValue>mfO5BmYrMk7qSINwNLe20bGUeuLimVPXeWsByHzmQSuJHbMQBOeQYS29q7h0mcdelSDDIMwqmm/o
+qLfeswjvbOs9INffkN5wHX39ydrkUAMXCOBQ7jWKXHC83mExvASmltjAgUouxv9/HjKGDau0KVft
+n3Hf0omwSwkyjU0kInYMiUAlRZgm85UGwM1U3/J9FNlOJcvp6AClcwYvQ5DK9NzMlD6SRliIshw7
+9xUQkgnHTe454Pbvab0smXVKg9ZYUb6bwKh0obofsmc59pg1i8vAYzrC6dunrWz46yDQv9hIicfw
+No9S1rNCgr3Q3bKq7fqwFjLda1JXIyj3SQEykg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -188,4 +226,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_130b1add-5bf9-4089-9bc0-b8bf6ecfed2a" Target="#_03603773-5709-4686-aaa1-66caee8593b8"><Timestamp>2018-06-25 09:21:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b48c55b5-7abe-4184-ade2-76cdc65d87ed" Target="#_6c123e32-5993-4182-bea9-38257e05e785"><Timestamp>2018-06-25 09:32:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
